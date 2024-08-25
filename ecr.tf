@@ -1,15 +1,5 @@
 resource "aws_ecr_repository" "node_todo" {
-  name                 = "node-todo"
-  image_tag_mutability = "MUTABLE"
-  force_delete         = true
-
-  image_scanning_configuration {
-    scan_on_push = false
-  }
-}
-
-resource "aws_ecr_repository" "banco-de-dados" {
-  name                 = "banco-de-dados"
+  name                 = "gptfree"
   image_tag_mutability = "MUTABLE"
   force_delete         = true
 

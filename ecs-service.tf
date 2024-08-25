@@ -1,5 +1,5 @@
 resource "aws_ecs_service" "service_todo" {
-  name            = "service-todo"
+  name            = "service-gpt"
   cluster         = aws_ecs_cluster.cluster_todo.id
   task_definition = aws_ecs_task_definition.task_todo.arn
   desired_count   = 1
@@ -20,7 +20,7 @@ resource "aws_ecs_service" "service_todo" {
 
   load_balancer {
     target_group_arn = aws_lb_target_group.node_todo.arn
-    container_name   = "todo-app"
+    container_name   = "gptfree"
     container_port   = 8080
   }
 

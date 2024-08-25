@@ -15,7 +15,7 @@ resource "aws_lb" "app_lb" {
 }
 
 resource "aws_lb_target_group" "node_todo" {
-  name     = "albtodo"
+  name     = "albgpt"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc2.id

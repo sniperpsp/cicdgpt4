@@ -10,7 +10,7 @@ resource "aws_ecs_task_definition" "task_todo" {
   container_definitions = jsonencode([
     {
       name      = "todo-app"
-      image     = "${var.ecr_uri}/node-todo:latest"
+      image     = "${var.ecr_uri}/gptfree:latest"
       essential = true
       portMappings = [
         {
@@ -46,17 +46,6 @@ resource "aws_ecs_task_definition" "task_todo" {
         }
       ]
     },
-    {
-      name      = "banco-de-dados"
-      image     = "${var.ecr_uri}/banco-de-dados:latest"
-      essential = true
-      portMappings = [
-        {
-          containerPort = 5432
-          hostPort      = 5432
-          protocol      = "tcp"
-        }
-      ]
-    }
-  ])
+    
+])
 }
