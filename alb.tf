@@ -24,7 +24,7 @@ resource "aws_lb_target_group" "node_todo" {
 
   health_check {
     enabled             = true
-    path                = "/"
+    path                = "/chat/"
     protocol            = "HTTP"
     matcher             = "200-299"
     interval            = 30
