@@ -1,4 +1,4 @@
-resource "aws_ecs_service" "service_todo" {
+resource "aws_ecs_service" "service-gpt" {
   name            = "service-gpt"
   cluster         = aws_ecs_cluster.cluster_todo.id
   task_definition = aws_ecs_task_definition.task_todo.arn
